@@ -108,4 +108,7 @@ export const reducer = (state: BudgetState = initialState, action: BudgetActions
       currentCategory: action.payload.id
     }
   }
+  return {
+    ...state
+  }
 }

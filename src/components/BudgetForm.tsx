@@ -12,7 +12,7 @@ const BudgetForm = () => {
 
   const isValid = useMemo(() => isNaN(budget) || budget <= 0, [budget])
 
-  const handleSubmit = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     dispatch({type: 'add-budget', payload: {budget}})
   }
